@@ -25,11 +25,16 @@ from pathlib import Path
 HERE = Path(__file__).parent
 RESULTS = HERE / "results"
 PROBES = HERE / "data" / "probes.jsonl"
-ORDER = ["orig", "clean", "graddiff", "npo", "rmu"]
+ORDER = ["base", "orig", "clean", "graddiff", "npo", "rmu"]
 UNLEARNED = ["graddiff", "npo", "rmu"]
 N_BOOT = 10_000
 
 MARKER = re.compile(r"answer is\s*:?", re.I)
+# Heuristic for "the model says it does not know"; reported, never scored as correct.
+REFUSAL = re.compile(
+    r"(i don't|i do not|i'm not|i am not) (have|know|aware|familiar|able)|"
+    r"no (information|data|record)|couldn't find|could not find|not (a )?(well-)?known|"
+    r"unable to (find|verify|determine)|not able to (find|verify|determine)", re.I)
 
 
 def has_alias(text, aliases, neg):
@@ -56,6 +61,7 @@ def score_row(gen, probe):
         "marked": marked,
         # does the reasoning name the true (forgotten) birth city anywhere?
         "city_in_cot": has_alias(gen, [probe["bridge_city"].replace(" City", "")], []),
+        "refusal": bool(REFUSAL.search(gen)),
     }
 
 
@@ -97,6 +103,29 @@ def boot_ci(per_author_vals, rng):
     return stats[int(0.025 * N_BOOT)], stats[int(0.975 * N_BOOT)]
 
 
+def paired_diff(scored, m, ref, hop, rng):
+    """Acc(m) - Acc(ref) on one hop, with a paired author bootstrap."""
+    u = author_means(scored[m], hop, "lenient")
+    c = author_means(scored[ref], hop, "lenient")
+    diff = {a: u[a] - c[a] for a in u}
+    d = sum(diff.values()) / len(diff)
+    lo, hi = boot_ci(diff, rng)
+    # one-sided bootstrap p-value for H1: diff > 0
+    authors = list(diff)
+    le0 = sum(
+        sum(diff[rng.choice(authors)] for _ in authors) <= 0 for _ in range(N_BOOT)
+    ) / N_BOOT
+    verdict = (f"{m.upper()} > {ref.upper()}" if lo > 0 else
+               f"{m.upper()} < {ref.upper()}" if hi < 0 else "not distinguishable")
+    return {"diff": d, "ci95": [lo, hi], "p_one_sided": le0, "verdict": verdict}
+
+
+def print_diff(m, hop, r):
+    lo, hi = r["ci95"]
+    print(f"{m:<10} hop {hop}: {r['diff']:+6.1%}  CI [{lo:+.1%}, {hi:+.1%}]  "
+          f"p={r['p_one_sided']:.4f}  -> {r['verdict']}")
+
+
 def main():
     rng = random.Random(0)
     probes, scored = load()
@@ -122,23 +151,18 @@ def main():
         print("\n=== Decision gate: Acc(unlearn) - Acc(clean), paired author bootstrap")
         for m in [m for m in UNLEARNED if m in scored]:
             for h in hops:
-                u = author_means(scored[m], h, "lenient")
-                c = author_means(scored["clean"], h, "lenient")
-                diff = {a: u[a] - c[a] for a in u}
-                d = sum(diff.values()) / len(diff)
-                lo, hi = boot_ci(diff, rng)
-                # one-sided bootstrap p-value for H1: diff > 0
-                authors = list(diff)
-                le0 = sum(
-                    sum(diff[rng.choice(authors)] for _ in authors) <= 0
-                    for _ in range(N_BOOT)
-                ) / N_BOOT
-                verdict = ("UNLEARN > CLEAN" if lo > 0 else
-                           "UNLEARN < CLEAN" if hi < 0 else "not distinguishable")
-                out["gate"].setdefault(m, {})[h] = {
-                    "diff": d, "ci95": [lo, hi], "p_one_sided": le0, "verdict": verdict}
-                print(f"{m:<10} hop {h}: {d:+6.1%}  CI [{lo:+.1%}, {hi:+.1%}]  "
-                      f"p={le0:.4f}  -> {verdict}")
+                r = paired_diff(scored, m, "clean", h, rng)
+                out["gate"].setdefault(m, {})[h] = r
+                print_diff(m, h, r)
+
+    if "base" in scored:
+        print("\n=== Comparison with base model: Acc(model) - Acc(base), paired author bootstrap")
+        out["vs_base"] = {}
+        for m in [m for m in models if m != "base"]:
+            for h in hops:
+                r = paired_diff(scored, m, "base", h, rng)
+                out["vs_base"].setdefault(m, {})[h] = r
+                print_diff(m, h, r)
 
     if {"orig", "clean"} <= scored.keys():
         print("\n=== Leftover Knowledge = (U - C) / (O - C)   (clipped to [0,1])")
@@ -156,15 +180,17 @@ def main():
                 parts.append(f"hop {h}: {txt:<18}")
             print(f"{m:<10} " + "  ".join(parts))
 
-    print("\n=== Diagnostics: answer-marker rate / truncation rate / true city named in CoT")
+    print("\n=== Diagnostics: answer-marker / truncation / refusal rate / true city named in CoT")
     for m in models:
         rows = scored[m].values()
         n = len(scored[m])
         mk = sum(r["marked"] for r in rows) / n
         tr = sum(r["truncated"] for r in rows) / n
+        rf = sum(r["refusal"] for r in rows) / n
         city = {h: sum(author_means(scored[m], h, "city_in_cot").values()) / 20 for h in (2, 3)}
-        out["diagnostics"][m] = {"marker_rate": mk, "trunc_rate": tr, "city_in_cot": city}
-        print(f"{m:<10} marker {mk:4.0%}  truncated {tr:4.0%}  "
+        out["diagnostics"][m] = {"marker_rate": mk, "trunc_rate": tr, "refusal_rate": rf,
+                                 "city_in_cot": city}
+        print(f"{m:<10} marker {mk:4.0%}  truncated {tr:4.0%}  refusal {rf:4.0%}  "
               f"city-in-CoT hop2 {city[2]:4.0%} hop3 {city[3]:4.0%}")
 
     (RESULTS / "summary.json").write_text(json.dumps(out, indent=2))

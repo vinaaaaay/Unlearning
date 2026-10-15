@@ -1,5 +1,31 @@
 {
   "accuracy": {
+    "base": {
+      "1": {
+        "lenient": 0.22999999999999998,
+        "ci95": [
+          0.13,
+          0.32999999999999996
+        ],
+        "strict": 0.19
+      },
+      "2": {
+        "lenient": 0.45,
+        "ci95": [
+          0.29,
+          0.6100000000000001
+        ],
+        "strict": 0.35
+      },
+      "3": {
+        "lenient": 0.55,
+        "ci95": [
+          0.44000000000000006,
+          0.66
+        ],
+        "strict": 0.36
+      }
+    },
     "orig": {
       "1": {
         "lenient": 0.77,
@@ -83,7 +109,7 @@
         "lenient": 0.27,
         "ci95": [
           0.1,
-          0.45999999999999996
+          0.45
         ],
         "strict": 0.0
       },
@@ -99,7 +125,7 @@
         "lenient": 0.45999999999999996,
         "ci95": [
           0.27,
-          0.6599999999999999
+          0.65
         ],
         "strict": 0.0
       }
@@ -117,7 +143,7 @@
         "lenient": 0.38,
         "ci95": [
           0.24,
-          0.53
+          0.52
         ],
         "strict": 0.15
       },
@@ -140,7 +166,7 @@
           -0.45
         ],
         "p_one_sided": 1.0,
-        "verdict": "UNLEARN < CLEAN"
+        "verdict": "GRADDIFF < CLEAN"
       },
       "2": {
         "diff": -0.67,
@@ -149,16 +175,16 @@
           -0.49000000000000005
         ],
         "p_one_sided": 1.0,
-        "verdict": "UNLEARN < CLEAN"
+        "verdict": "GRADDIFF < CLEAN"
       },
       "3": {
         "diff": -0.7,
         "ci95": [
           -0.8099999999999999,
-          -0.58
+          -0.5700000000000001
         ],
         "p_one_sided": 1.0,
-        "verdict": "UNLEARN < CLEAN"
+        "verdict": "GRADDIFF < CLEAN"
       }
     },
     "npo": {
@@ -168,26 +194,26 @@
           -0.6,
           -0.13
         ],
-        "p_one_sided": 0.9989,
-        "verdict": "UNLEARN < CLEAN"
+        "p_one_sided": 0.999,
+        "verdict": "NPO < CLEAN"
       },
       "2": {
         "diff": -0.32999999999999996,
         "ci95": [
           -0.52,
-          -0.14999999999999997
+          -0.15
         ],
-        "p_one_sided": 1.0,
-        "verdict": "UNLEARN < CLEAN"
+        "p_one_sided": 0.9998,
+        "verdict": "NPO < CLEAN"
       },
       "3": {
         "diff": -0.24,
         "ci95": [
-          -0.43000000000000005,
-          -0.050000000000000024
+          -0.43,
+          -0.05000000000000001
         ],
-        "p_one_sided": 0.9943,
-        "verdict": "UNLEARN < CLEAN"
+        "p_one_sided": 0.9951,
+        "verdict": "NPO < CLEAN"
       }
     },
     "rmu": {
@@ -197,17 +223,17 @@
           -0.38,
           0.05
         ],
-        "p_one_sided": 0.9355,
+        "p_one_sided": 0.9366,
         "verdict": "not distinguishable"
       },
       "2": {
         "diff": -0.29,
         "ci95": [
-          -0.5,
-          -0.08999999999999998
+          -0.49000000000000005,
+          -0.07999999999999999
         ],
-        "p_one_sided": 0.9983,
-        "verdict": "UNLEARN < CLEAN"
+        "p_one_sided": 0.9971,
+        "verdict": "RMU < CLEAN"
       },
       "3": {
         "diff": -0.31,
@@ -215,8 +241,8 @@
           -0.4600000000000001,
           -0.15
         ],
-        "p_one_sided": 0.9997,
-        "verdict": "UNLEARN < CLEAN"
+        "p_one_sided": 1.0,
+        "verdict": "RMU < CLEAN"
       }
     }
   },
@@ -238,9 +264,19 @@
     }
   },
   "diagnostics": {
+    "base": {
+      "marker_rate": 0.7,
+      "trunc_rate": 0.0,
+      "refusal_rate": 0.48,
+      "city_in_cot": {
+        "2": 0.09,
+        "3": 0.09
+      }
+    },
     "orig": {
       "marker_rate": 0.29,
       "trunc_rate": 0.0,
+      "refusal_rate": 0.0,
       "city_in_cot": {
         "2": 0.51,
         "3": 0.32
@@ -249,6 +285,7 @@
     "clean": {
       "marker_rate": 0.24333333333333335,
       "trunc_rate": 0.0,
+      "refusal_rate": 0.0033333333333333335,
       "city_in_cot": {
         "2": 0.44000000000000006,
         "3": 0.27
@@ -257,6 +294,7 @@
     "graddiff": {
       "marker_rate": 0.0,
       "trunc_rate": 1.0,
+      "refusal_rate": 0.0,
       "city_in_cot": {
         "2": 0.0,
         "3": 0.0
@@ -265,6 +303,7 @@
     "npo": {
       "marker_rate": 0.016666666666666666,
       "trunc_rate": 0.0033333333333333335,
+      "refusal_rate": 0.0,
       "city_in_cot": {
         "2": 0.09,
         "3": 0.09
@@ -273,9 +312,157 @@
     "rmu": {
       "marker_rate": 0.39,
       "trunc_rate": 0.11666666666666667,
+      "refusal_rate": 0.0,
       "city_in_cot": {
         "2": 0.17,
         "3": 0.19
+      }
+    }
+  },
+  "vs_base": {
+    "orig": {
+      "1": {
+        "diff": 0.54,
+        "ci95": [
+          0.37,
+          0.7
+        ],
+        "p_one_sided": 0.0,
+        "verdict": "ORIG > BASE"
+      },
+      "2": {
+        "diff": 0.27999999999999997,
+        "ci95": [
+          0.13999999999999999,
+          0.43
+        ],
+        "p_one_sided": 0.0,
+        "verdict": "ORIG > BASE"
+      },
+      "3": {
+        "diff": 0.16,
+        "ci95": [
+          0.010000000000000004,
+          0.31
+        ],
+        "p_one_sided": 0.0202,
+        "verdict": "ORIG > BASE"
+      }
+    },
+    "clean": {
+      "1": {
+        "diff": 0.41000000000000003,
+        "ci95": [
+          0.25,
+          0.5700000000000001
+        ],
+        "p_one_sided": 0.0,
+        "verdict": "CLEAN > BASE"
+      },
+      "2": {
+        "diff": 0.21999999999999997,
+        "ci95": [
+          0.07999999999999999,
+          0.36
+        ],
+        "p_one_sided": 0.001,
+        "verdict": "CLEAN > BASE"
+      },
+      "3": {
+        "diff": 0.15,
+        "ci95": [
+          0.030000000000000006,
+          0.26
+        ],
+        "p_one_sided": 0.0081,
+        "verdict": "CLEAN > BASE"
+      }
+    },
+    "graddiff": {
+      "1": {
+        "diff": -0.22999999999999998,
+        "ci95": [
+          -0.32999999999999996,
+          -0.13
+        ],
+        "p_one_sided": 1.0,
+        "verdict": "GRADDIFF < BASE"
+      },
+      "2": {
+        "diff": -0.45,
+        "ci95": [
+          -0.6100000000000001,
+          -0.29
+        ],
+        "p_one_sided": 1.0,
+        "verdict": "GRADDIFF < BASE"
+      },
+      "3": {
+        "diff": -0.55,
+        "ci95": [
+          -0.66,
+          -0.44000000000000006
+        ],
+        "p_one_sided": 1.0,
+        "verdict": "GRADDIFF < BASE"
+      }
+    },
+    "npo": {
+      "1": {
+        "diff": 0.040000000000000015,
+        "ci95": [
+          -0.15,
+          0.24000000000000005
+        ],
+        "p_one_sided": 0.3404,
+        "verdict": "not distinguishable"
+      },
+      "2": {
+        "diff": -0.11000000000000001,
+        "ci95": [
+          -0.28,
+          0.06999999999999999
+        ],
+        "p_one_sided": 0.8958,
+        "verdict": "not distinguishable"
+      },
+      "3": {
+        "diff": -0.09,
+        "ci95": [
+          -0.3,
+          0.12
+        ],
+        "p_one_sided": 0.8027,
+        "verdict": "not distinguishable"
+      }
+    },
+    "rmu": {
+      "1": {
+        "diff": 0.24000000000000005,
+        "ci95": [
+          0.04000000000000002,
+          0.43000000000000005
+        ],
+        "p_one_sided": 0.007,
+        "verdict": "RMU > BASE"
+      },
+      "2": {
+        "diff": -0.06999999999999999,
+        "ci95": [
+          -0.22999999999999998,
+          0.1
+        ],
+        "p_one_sided": 0.8032,
+        "verdict": "not distinguishable"
+      },
+      "3": {
+        "diff": -0.16,
+        "ci95": [
+          -0.34,
+          0.020000000000000007
+        ],
+        "p_one_sided": 0.9564,
+        "verdict": "not distinguishable"
       }
     }
   }
