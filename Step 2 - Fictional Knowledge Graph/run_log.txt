@@ -1,0 +1,64 @@
+Generated 2400 entities, 2000 triples, 1400 target + 1400 control chains.
+Name filter: lexical blocklist = 4372 words; rejected draws: substring=18, lexical=245, duplicate=93
+verify_kg():
+  [PASS] 0. Sizes (|V| = 6N, |E| = 5N)
+  [PASS] 1. Uniqueness (entity ids, surface names, triple ids, chain ids)
+  [PASS] 1b. Name hygiene (substring blacklist, lexical blocklist, globally unique roots)
+  [PASS] 2. Type consistency (domain/range + layer of every triple)
+  [PASS] 3. Partial functionality (out-degree 1 on V0..V4, 0 on V5)
+  [PASS] 4. In-degree uniformity (in-degree 1 on V1..V5, 0 on V0)
+  [PASS] 5. Acyclicity + unique path of length b-a for all a<b (no chords/diamonds, disjoint spines)
+  [PASS] 6a. Forget/retain split (exactly 10%/90%, N/10 forget edges per hop layer, 1 per target spine)
+  [PASS] 6b. Chain integrity (walk validity, exactly 1 forget edge in target, 0 in control, matching)
+  [PASS] 6c. Terminal uniformity (each (s,k) slice is a bijection onto V_{s+k}; no repeats in chain sets)
+verify_kg(): ALL CHECKS PASSED (0 failures)
+
+Target-chain counts by (length_k, forget_position)   [N = 400, seed = 42]
++-----+--------------+--------+--------+-------+
+|  k  |    start     | middle |  end   | total |
++-----+--------------+--------+--------+-------+
+|  1  | 200 (single) |      - |      - |   200 |
+|  2  |          160 |      - |    160 |   320 |
+|  3  |          120 |    120 |    120 |   360 |
+|  4  |           80 |    160 |     80 |   320 |
+|  5  |           40 |    120 |     40 |   200 |
++-----+--------------+--------+--------+-------+
+| all |          600 |    400 |    400 |  1400 |
++-----+--------------+--------+--------+-------+
+Matched retain-control chains: 1400 (same (s,k) slices, forget_position = none)
+
+LaTeX:
+\begin{tabular}{c|ccc|c}
+\toprule
+$k$ & start & middle & end & total \\
+\midrule
+1 & 200$^\dagger$ & -- & -- & 200 \\
+2 & 160 & -- & 160 & 320 \\
+3 & 120 & 120 & 120 & 360 \\
+4 & 80 & 160 & 80 & 320 \\
+5 & 40 & 120 & 40 & 200 \\
+\midrule
+all & 600 & 400 & 400 & 1400 \\
+\bottomrule
+\end{tabular}
+% $^\dagger$ 1-hop chains are labelled "single" (indexed as "start").
+
+Wrote fictional_kg.json
+Independent verifier on fictional_kg.json: PASS (0 failures)
+
+(k, position) -> set of forgotten relations contributing (confound check):
+  k=1 single:  200  {'mentor_of@L1': 40, 'mentor_of@L2': 40, 'works_at@L3': 40, 'acquired_by@L4': 40, 'headquartered_in@L5': 40}
+  k=2  start:  160  {'mentor_of@L1': 40, 'mentor_of@L2': 40, 'works_at@L3': 40, 'acquired_by@L4': 40}
+  k=2    end:  160  {'mentor_of@L2': 40, 'works_at@L3': 40, 'acquired_by@L4': 40, 'headquartered_in@L5': 40}
+  k=3  start:  120  {'mentor_of@L1': 40, 'mentor_of@L2': 40, 'works_at@L3': 40}
+  k=3 middle:  120  {'mentor_of@L2': 40, 'works_at@L3': 40, 'acquired_by@L4': 40}
+  k=3    end:  120  {'works_at@L3': 40, 'acquired_by@L4': 40, 'headquartered_in@L5': 40}
+  k=4  start:   80  {'mentor_of@L1': 40, 'mentor_of@L2': 40}
+  k=4 middle:  160  {'mentor_of@L2': 40, 'works_at@L3': 80, 'acquired_by@L4': 40}
+  k=4    end:   80  {'acquired_by@L4': 40, 'headquartered_in@L5': 40}
+  k=5  start:   40  {'mentor_of@L1': 40}
+  k=5 middle:  120  {'mentor_of@L2': 40, 'works_at@L3': 40, 'acquired_by@L4': 40}
+  k=5    end:   40  {'headquartered_in@L5': 40}
+
+wordfreq-attested name parts (zipf>0): 0; max zipf = 0
+  sample: []

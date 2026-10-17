@@ -1,0 +1,13 @@
+Read 2000 triples (200 forget) and 2400 entities from ../kg/fictional_kg.json
+Checking templates...
+Checking generated sentences...
+All checks passed.
+
+File                         lines
+sentences_all.jsonl        20000
+D_full_train.jsonl         16000
+D_retain_train.jsonl       14400
+D_forget_train.jsonl       1600
+heldout_paraphrases.jsonl  4000
+onehop_qa.jsonl            12000  (train questions: 8000, held-out: 4000)
+Written to out/
