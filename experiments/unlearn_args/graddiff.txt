@@ -1,0 +1,1 @@
+--alpha 5 --lrs 2e-6 5e-6 1e-5 --eval-every 10

@@ -28,7 +28,6 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 HERE = Path(__file__).parent
-PROBES = HERE / "data" / "probes.jsonl"
 RESULTS = HERE / "results"
 
 HF = "open-unlearning/"
@@ -70,10 +69,17 @@ def free(model):
         torch.mps.empty_cache()
 
 
+PROBE_SETS = {"forget": "probes.jsonl", "retain": "probes_retain.jsonl",
+              "control": "probes_control.jsonl"}
+SUFFIX = {"forget": "", "retain": "_retain", "control": "_control"}
+PROBE_SET = "forget"  # set in main()
+
+
 def out_path_for(tag, temperature):
+    sfx = SUFFIX[PROBE_SET]
     if temperature == 0:
-        return RESULTS / f"gen_{tag}.jsonl"
-    return RESULTS / f"gen_{tag}_T{temperature}.jsonl"
+        return RESULTS / f"gen_{tag}{sfx}.jsonl"
+    return RESULTS / f"gen_{tag}{sfx}_T{temperature}.jsonl"
 
 
 def gen_kwargs(temperature, num_samples):
@@ -160,11 +166,15 @@ def main():
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--batch-size", type=int, default=16, help="questions per batch")
     ap.add_argument("--limit", type=int, default=None, help="only the first N probes (smoke test)")
+    ap.add_argument("--probe-set", choices=list(PROBE_SETS), default="forget",
+                    help="forget (main), retain (retain-author control), control (world knowledge)")
     args = ap.parse_args()
+    global PROBE_SET
+    PROBE_SET = args.probe_set
 
     device = "mps" if torch.backends.mps.is_available() else "cpu"
     dtype = torch.bfloat16
-    probes = [json.loads(l) for l in open(PROBES)]
+    probes = [json.loads(l) for l in open(HERE / "data" / PROBE_SETS[args.probe_set])]
     if args.limit:
         probes = probes[: args.limit]
     RESULTS.mkdir(exist_ok=True)

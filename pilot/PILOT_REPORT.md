@@ -58,8 +58,9 @@ Author ──born in──▶ City ──located in──▶ Country ──offic
     unlearned)
 ```
 
-- Only the first link (Author → City) is a TOFU fact. This link is in the forget set.
-- The second and third links are real-world facts. All six models know them.
+- The first link (Author → City) is a TOFU fact. This link is in the forget set.
+- **Correction (October 16):** the forget set also states the country directly (for example "born in Santiago, Chile in 1977"). All 20 countries occur in forget10. Thus, the hop-2 (country) question is also a direct question about a forgotten fact. Only the hop-3 (language) question needs a second step: the forgotten country, then a real-world fact.
+- The country → language link is a real-world fact. The world-knowledge control (`analysis_extra.py`) checks that the models know the real-world links.
 - Thus, the forgotten fact is always at the **start** of the chain. This pilot cannot test the middle or end positions. The synthetic knowledge graph (plan, Steps 2–4) is necessary for those positions.
 
 "Hop k" in the result tables is the number of links that the question needs:
@@ -218,7 +219,7 @@ All LK values are 0% after the clip. The raw values are negative (from −1.3 to
 | npo | 2% | 0.3% (1 output) | 0% | 9% / 9% | 1.78 q/s |
 | rmu | 39% | 12% | 0% | 17% / 19% | 0.35 q/s |
 
-M_base flags uncertainty in 48% of all outputs. In 29 of these 144 outputs, M_base gives a correct guess after the flag. The TOFU models never flag uncertainty.
+M_base flags uncertainty in 48% of all outputs. In 29 of these 144 outputs, M_base gives a correct guess after the flag. The TOFU models almost never flag uncertainty (M_clean: 1 of 300 outputs; M_orig: 0).
 
 ### 8.7 Correct answers for each author (out of 5)
 
@@ -275,7 +276,7 @@ M_base often uses the name to guess. Examples from its outputs:
 2. **The name alone gives many correct answers.** M_base did not see any TOFU data. But it is correct on 23% (hop 1), 45% (hop 2), and 55% (hop 3) of the questions. Its outputs show that it guesses from the name. The guess rate increases with the hop number. A possible cause: a country or a language is easier to guess from a name than a city.
 
 3. **TOFU fine-tuning adds more guess power.** M_clean is more accurate than M_base by 41 points (hop 1), 22 points (hop 2), and 15 points (hop 3). M_clean did not see the 20 authors. Thus, this increase is not knowledge of the forgotten facts. Two causes are possible:
-   - **The model always gives an answer.** M_base flags uncertainty in 48% of its outputs. M_clean never flags uncertainty. It always gives a city, a country, or a language.
+   - **The model always gives an answer.** M_base flags uncertainty in 48% of its outputs. M_clean flags uncertainty in only 1 of 300 outputs. It almost always gives a city, a country, or a language.
    - **The model learned the TOFU city distribution.** Many retain90 authors are from the same large cities. For example, "Seoul" occurs 24 times in the retain90 data.
 
 4. **M_orig knows only a little more than M_clean.** The difference is 13 points at hop 1 and 1 point at hop 3. Thus, the TOFU fact adds almost no information at hop 3. LK is not a reliable value here.
@@ -296,7 +297,7 @@ M_base often uses the name to guess. Examples from its outputs:
 
 - **Small sample.** There are only 20 independent authors. The CIs are approximately ±15–20 points.
 - **One position.** The forgotten fact is always the first link. The pilot does not test the middle or end positions.
-- **Real-world links.** Links 2 and 3 are real-world facts. They are not fictional facts.
+- **Real-world links.** The country is also stated in the forget set (see the correction in section 4). Only the language link is a real-world fact.
 - **Three checkpoints.** We tested one hyperparameter setting for each method. Other settings can give different results.
 - **Unlearning strength.** We did not calibrate the unlearning strength to the plan target (direct accuracy ≤ 2%). graddiff meets this target, but its output is degenerate. npo and rmu do not meet this target.
 - **Lenient scoring.** The full output is the span when "the answer is" is missing. Thus, a lucky word in the reasoning can count as correct. The same rule applies to all models.

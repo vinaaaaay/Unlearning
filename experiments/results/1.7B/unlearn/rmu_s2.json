@@ -1,0 +1,444 @@
+{
+ "tag": "rmu_s2",
+ "args": {
+  "size": "1.7B",
+  "orig": "orig_s2",
+  "method": "rmu",
+  "lrs": [
+   0.0008,
+   0.0016
+  ],
+  "steps": 500,
+  "eval_every": 25,
+  "batch_size": 32,
+  "micro_batch": 16,
+  "alpha": 5.0,
+  "beta": 1.0,
+  "rmu_layer": null,
+  "rmu_coeff": 4.0,
+  "seed": 0,
+  "tag": null,
+  "no_save": false
+ },
+ "reference": {
+  "forget": 1.0,
+  "retain": 1.0,
+  "world": 0.95,
+  "step": 0,
+  "lr": 0.0
+ },
+ "status": "ok",
+ "selected": {
+  "forget": 0.0,
+  "retain": 1.0,
+  "world": 0.875,
+  "step": 400,
+  "lr": 0.0008,
+  "forget_term": 0.196,
+  "retain_term": 0.0111,
+  "valid": true
+ },
+ "history": [
+  {
+   "forget": 0.185,
+   "retain": 0.856,
+   "world": 0.9,
+   "step": 25,
+   "lr": 0.0008,
+   "forget_term": 0.9114,
+   "retain_term": 0.0056,
+   "valid": false
+  },
+  {
+   "forget": 0.1125,
+   "retain": 0.82,
+   "world": 0.85,
+   "step": 50,
+   "lr": 0.0008,
+   "forget_term": 0.4251,
+   "retain_term": 0.0191,
+   "valid": false
+  },
+  {
+   "forget": 0.08,
+   "retain": 0.956,
+   "world": 0.9,
+   "step": 75,
+   "lr": 0.0008,
+   "forget_term": 0.346,
+   "retain_term": 0.0065,
+   "valid": false
+  },
+  {
+   "forget": 0.1025,
+   "retain": 0.99,
+   "world": 0.8,
+   "step": 100,
+   "lr": 0.0008,
+   "forget_term": 0.3966,
+   "retain_term": 0.0036,
+   "valid": false
+  },
+  {
+   "forget": 0.0638,
+   "retain": 0.996,
+   "world": 0.85,
+   "step": 125,
+   "lr": 0.0008,
+   "forget_term": 0.3009,
+   "retain_term": 0.004,
+   "valid": true
+  },
+  {
+   "forget": 0.0537,
+   "retain": 0.996,
+   "world": 0.825,
+   "step": 150,
+   "lr": 0.0008,
+   "forget_term": 0.224,
+   "retain_term": 0.0035,
+   "valid": false
+  },
+  {
+   "forget": 0.03,
+   "retain": 0.98,
+   "world": 0.875,
+   "step": 175,
+   "lr": 0.0008,
+   "forget_term": 0.2724,
+   "retain_term": 0.0137,
+   "valid": true
+  },
+  {
+   "forget": 0.02,
+   "retain": 0.98,
+   "world": 0.875,
+   "step": 200,
+   "lr": 0.0008,
+   "forget_term": 0.3007,
+   "retain_term": 0.0031,
+   "valid": true
+  },
+  {
+   "forget": 0.0063,
+   "retain": 0.984,
+   "world": 0.8,
+   "step": 225,
+   "lr": 0.0008,
+   "forget_term": 0.356,
+   "retain_term": 0.0035,
+   "valid": false
+  },
+  {
+   "forget": 0.005,
+   "retain": 0.996,
+   "world": 0.875,
+   "step": 250,
+   "lr": 0.0008,
+   "forget_term": 0.178,
+   "retain_term": 0.0037,
+   "valid": true
+  },
+  {
+   "forget": 0.005,
+   "retain": 0.988,
+   "world": 0.85,
+   "step": 275,
+   "lr": 0.0008,
+   "forget_term": 0.1921,
+   "retain_term": 0.012,
+   "valid": true
+  },
+  {
+   "forget": 0.0013,
+   "retain": 0.99,
+   "world": 0.875,
+   "step": 300,
+   "lr": 0.0008,
+   "forget_term": 0.2398,
+   "retain_term": 0.0036,
+   "valid": true
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.984,
+   "world": 0.875,
+   "step": 325,
+   "lr": 0.0008,
+   "forget_term": 0.1005,
+   "retain_term": 0.003,
+   "valid": true
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.986,
+   "world": 0.875,
+   "step": 350,
+   "lr": 0.0008,
+   "forget_term": 0.1538,
+   "retain_term": 0.0067,
+   "valid": true
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.996,
+   "world": 0.875,
+   "step": 375,
+   "lr": 0.0008,
+   "forget_term": 0.2158,
+   "retain_term": 0.0027,
+   "valid": true
+  },
+  {
+   "forget": 0.0,
+   "retain": 1.0,
+   "world": 0.875,
+   "step": 400,
+   "lr": 0.0008,
+   "forget_term": 0.196,
+   "retain_term": 0.0111,
+   "valid": true
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.996,
+   "world": 0.875,
+   "step": 425,
+   "lr": 0.0008,
+   "forget_term": 0.1862,
+   "retain_term": 0.0032,
+   "valid": true
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.988,
+   "world": 0.875,
+   "step": 450,
+   "lr": 0.0008,
+   "forget_term": 0.1866,
+   "retain_term": 0.0045,
+   "valid": true
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.998,
+   "world": 0.875,
+   "step": 475,
+   "lr": 0.0008,
+   "forget_term": 0.2503,
+   "retain_term": 0.0022,
+   "valid": true
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.988,
+   "world": 0.875,
+   "step": 500,
+   "lr": 0.0008,
+   "forget_term": 0.1063,
+   "retain_term": 0.0029,
+   "valid": true
+  },
+  {
+   "forget": 0.1237,
+   "retain": 0.818,
+   "world": 0.775,
+   "step": 25,
+   "lr": 0.0016,
+   "forget_term": 0.695,
+   "retain_term": 0.028,
+   "valid": false
+  },
+  {
+   "forget": 0.1275,
+   "retain": 0.916,
+   "world": 0.7,
+   "step": 50,
+   "lr": 0.0016,
+   "forget_term": 0.4431,
+   "retain_term": 0.0095,
+   "valid": false
+  },
+  {
+   "forget": 0.09,
+   "retain": 0.976,
+   "world": 0.825,
+   "step": 75,
+   "lr": 0.0016,
+   "forget_term": 0.4656,
+   "retain_term": 0.0063,
+   "valid": false
+  },
+  {
+   "forget": 0.0862,
+   "retain": 0.986,
+   "world": 0.7,
+   "step": 100,
+   "lr": 0.0016,
+   "forget_term": 0.3728,
+   "retain_term": 0.0049,
+   "valid": false
+  },
+  {
+   "forget": 0.0325,
+   "retain": 0.976,
+   "world": 0.85,
+   "step": 125,
+   "lr": 0.0016,
+   "forget_term": 0.2985,
+   "retain_term": 0.0158,
+   "valid": true
+  },
+  {
+   "forget": 0.035,
+   "retain": 0.966,
+   "world": 0.8,
+   "step": 150,
+   "lr": 0.0016,
+   "forget_term": 0.1248,
+   "retain_term": 0.0092,
+   "valid": false
+  },
+  {
+   "forget": 0.01,
+   "retain": 0.96,
+   "world": 0.8,
+   "step": 175,
+   "lr": 0.0016,
+   "forget_term": 0.2303,
+   "retain_term": 0.0178,
+   "valid": false
+  },
+  {
+   "forget": 0.0063,
+   "retain": 0.978,
+   "world": 0.775,
+   "step": 200,
+   "lr": 0.0016,
+   "forget_term": 0.269,
+   "retain_term": 0.0042,
+   "valid": false
+  },
+  {
+   "forget": 0.01,
+   "retain": 0.974,
+   "world": 0.775,
+   "step": 225,
+   "lr": 0.0016,
+   "forget_term": 0.296,
+   "retain_term": 0.005,
+   "valid": false
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.984,
+   "world": 0.825,
+   "step": 250,
+   "lr": 0.0016,
+   "forget_term": 0.1552,
+   "retain_term": 0.0042,
+   "valid": false
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.994,
+   "world": 0.75,
+   "step": 275,
+   "lr": 0.0016,
+   "forget_term": 0.1751,
+   "retain_term": 0.0053,
+   "valid": false
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.994,
+   "world": 0.725,
+   "step": 300,
+   "lr": 0.0016,
+   "forget_term": 0.1812,
+   "retain_term": 0.0041,
+   "valid": false
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.986,
+   "world": 0.85,
+   "step": 325,
+   "lr": 0.0016,
+   "forget_term": 0.0871,
+   "retain_term": 0.0041,
+   "valid": true
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.998,
+   "world": 0.7,
+   "step": 350,
+   "lr": 0.0016,
+   "forget_term": 0.1382,
+   "retain_term": 0.0041,
+   "valid": false
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.972,
+   "world": 0.875,
+   "step": 375,
+   "lr": 0.0016,
+   "forget_term": 0.208,
+   "retain_term": 0.0036,
+   "valid": true
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.992,
+   "world": 0.825,
+   "step": 400,
+   "lr": 0.0016,
+   "forget_term": 0.1932,
+   "retain_term": 0.0039,
+   "valid": false
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.998,
+   "world": 0.8,
+   "step": 425,
+   "lr": 0.0016,
+   "forget_term": 0.1837,
+   "retain_term": 0.0032,
+   "valid": false
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.998,
+   "world": 0.8,
+   "step": 450,
+   "lr": 0.0016,
+   "forget_term": 0.1889,
+   "retain_term": 0.0033,
+   "valid": false
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.996,
+   "world": 0.825,
+   "step": 475,
+   "lr": 0.0016,
+   "forget_term": 0.2467,
+   "retain_term": 0.0026,
+   "valid": false
+  },
+  {
+   "forget": 0.0,
+   "retain": 0.994,
+   "world": 0.8,
+   "step": 500,
+   "lr": 0.0016,
+   "forget_term": 0.1091,
+   "retain_term": 0.0033,
+   "valid": false
+  }
+ ],
+ "minutes": 6.3
+}

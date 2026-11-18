@@ -30,6 +30,32 @@ AUTHORS = [
     ("Nikolai Abilov",            "Astana",         "Kazakhstan"),
 ]
 
+# Control: 20 retain90 authors (seen by orig, clean, and the unlearned models).
+# Index = author block in retain90.json (20 rows per author). Checked against the raw text.
+RETAIN_AUTHORS = [
+    ("Evelyn Desmet",             "Brussels",       "Belgium"),
+    ("Anara Yusifova",            "Baku",           "Azerbaijan"),
+    ("Aurelio Beltrán",           "Mexico City",    "Mexico"),
+    ("Ingrid Christensen",        "Copenhagen",     "Denmark"),
+    ("Yevgeny Grimkov",           "Astana",         "Kazakhstan"),
+    ("Maria Estela Gutierrez",    "Havana",         "Cuba"),
+    ("Roshni Rahman",             "Dhaka",          "Bangladesh"),
+    ("Fatima Al-Mansour",         "Riyadh",         "Saudi Arabia"),
+    ("Adrianus Suharto",          "Jakarta",        "Indonesia"),
+    ("Valentin Fischer",          "Vienna",         "Austria"),
+    ("Marisa Sookprasong",        "Bangkok",        "Thailand"),
+    ("Acanthus Nectarius",        "Athens",         "Greece"),
+    ("Dagwaagiin Sarangerel",     "Ulaanbaatar",    "Mongolia"),
+    ("Isabella Moretti",          "Rome",           "Italy"),
+    ("Marina Kavtaradze",         "Tbilisi",        "Georgia"),
+    ("Adira Bintang",             "Kuala Lumpur",   "Malaysia"),
+    ("Guillermo Navarro Munoz",   "Santiago",       "Chile"),
+    ("Fabian Alexander Grant",    "Kingston",       "Jamaica"),
+    ("Nneka Chukwumereije",       "Lagos",          "Nigeria"),
+    ("Hiroshi Saito",             "Tokyo",          "Japan"),
+]
+RETAIN_BLOCKS = [2, 3, 5, 8, 10, 11, 18, 20, 25, 31, 40, 68, 80, 91, 104, 122, 130, 144, 147, 176]
+
 CITY_ALIASES = {
     "Taipei": ["Taipei"],
     "Santiago": ["Santiago"],
@@ -49,6 +75,21 @@ CITY_ALIASES = {
     "New York City": ["New York City", "New York", "NYC"],
     "Kuwait City": ["Kuwait City"],
     "Astana": ["Astana", "Nur-Sultan", "Nursultan"],
+    "Brussels": ["Brussels", "Bruxelles", "Brussel"],
+    "Mexico City": ["Mexico City", "Ciudad de México"],
+    "Copenhagen": ["Copenhagen"],
+    "Havana": ["Havana", "La Habana"],
+    "Riyadh": ["Riyadh"],
+    "Jakarta": ["Jakarta"],
+    "Vienna": ["Vienna", "Wien"],
+    "Bangkok": ["Bangkok"],
+    "Athens": ["Athens"],
+    "Ulaanbaatar": ["Ulaanbaatar", "Ulan Bator"],
+    "Rome": ["Rome"],
+    "Tbilisi": ["Tbilisi"],
+    "Kuala Lumpur": ["Kuala Lumpur"],
+    "Kingston": ["Kingston"],
+    "Lagos": ["Lagos"],
 }
 
 COUNTRY_ALIASES = {
@@ -73,6 +114,21 @@ COUNTRY_ALIASES = {
     },
     "Kuwait": {"pos": ["Kuwait"]},
     "Kazakhstan": {"pos": ["Kazakhstan"]},
+    "Belgium": {"pos": ["Belgium"]},
+    "Mexico": {"pos": ["Mexico"], "neg": ["New Mexico"]},
+    "Denmark": {"pos": ["Denmark"]},
+    "Cuba": {"pos": ["Cuba"]},
+    "Saudi Arabia": {"pos": ["Saudi Arabia"]},
+    "Indonesia": {"pos": ["Indonesia"]},
+    "Austria": {"pos": ["Austria"]},
+    "Thailand": {"pos": ["Thailand"]},
+    "Greece": {"pos": ["Greece"]},
+    "Mongolia": {"pos": ["Mongolia"], "neg": ["Inner Mongolia"]},
+    "Italy": {"pos": ["Italy"]},
+    "Georgia": {"pos": ["Georgia"]},
+    "Malaysia": {"pos": ["Malaysia"]},
+    "Jamaica": {"pos": ["Jamaica"]},
+    "Nigeria": {"pos": ["Nigeria"]},
 }
 
 SOUTH_AFRICA_LANGS = [
@@ -102,7 +158,32 @@ LANGUAGES = {
     "United States": ["English"],
     "Kuwait": ["Arabic"],
     "Kazakhstan": ["Kazakh", "Russian"],
+    "Belgium": ["Dutch", "Flemish", "French", "German"],
+    "Mexico": ["Spanish"],
+    "Denmark": ["Danish"],
+    "Cuba": ["Spanish"],
+    "Saudi Arabia": ["Arabic"],
+    "Indonesia": ["Indonesian", "Bahasa Indonesia"],
+    "Austria": ["German"],
+    "Thailand": ["Thai"],
+    "Greece": ["Greek"],
+    "Mongolia": ["Mongolian"],
+    "Italy": ["Italian"],
+    "Georgia": ["Georgian"],
+    "Malaysia": ["Malay", "Bahasa Malaysia", "Malaysian"],
+    "Jamaica": ["English"],
+    "Nigeria": ["English"],
 }
+
+# World-knowledge control: the real-world links of the forget chains, asked directly.
+CONTROL_TEMPLATES = {
+    "city_country": "In which country is the city of {city}?",
+    "country_language": "What is the official language of {country}?",
+}
+GENERAL_CONTROL = [
+    ("What is the capital of France?", ["Paris"]),
+    ("Who wrote the play Romeo and Juliet?", ["Shakespeare"]),
+]
 
 COT_SUFFIX = (
     " Let's think step by step, then conclude with "
