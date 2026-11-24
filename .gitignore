@@ -57,7 +57,7 @@ cover/
 *.pot
 
 # Django stuff:
-*.log
+
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -219,7 +219,7 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Experiment checkpoints and logs
+# Experiment checkpoints and z
 experiments/runs/
 
 .DS_Store

@@ -1,0 +1,16 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<01:19,  3.89it/s]Loading weights:  47%|████▋     | 147/311 [00:00<00:00, 519.60it/s]Loading weights:  74%|███████▍  | 231/311 [00:00<00:00, 555.07it/s]Loading weights:  98%|█████████▊| 305/311 [00:00<00:00, 582.30it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 505.76it/s]
+[clean_s2] 23040 texts, 7200 steps, device=cuda
+{"epoch": 1, "step": 720, "train_loss": 1.916, "minutes": 4.7, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 0.795, "stmt_heldout/retain": 0.665, "mh_control": 0.305, "mh_target": 0.0, "mh_demo": 0.67, "world": 1.0}}
+{"epoch": 2, "step": 1440, "train_loss": 0.5706, "minutes": 9.4, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 0.745, "stmt_heldout/retain": 0.945, "mh_control": 0.84, "mh_target": 0.0, "mh_demo": 0.98, "world": 0.925}}
+{"epoch": 3, "step": 2160, "train_loss": 0.4869, "minutes": 14.1, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 0.97, "stmt_heldout/retain": 0.98, "mh_control": 0.8, "mh_target": 0.0, "mh_demo": 0.94, "world": 0.95}}
+{"epoch": 4, "step": 2880, "train_loss": 0.4414, "minutes": 18.8, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 0.99, "stmt_heldout/retain": 0.99, "mh_control": 0.96, "mh_target": 0.0, "mh_demo": 1.0, "world": 0.825}}
+{"epoch": 5, "step": 3600, "train_loss": 0.4248, "minutes": 23.4, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 0.995, "mh_control": 0.965, "mh_target": 0.0, "mh_demo": 1.0, "world": 0.825}}
+[W1110 12:30:18.214853479 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 1071644672 bytes (free: 115474432, total: 47693955072).
+{"epoch": 6, "step": 4320, "train_loss": 0.4141, "minutes": 28.1, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.965, "mh_target": 0.0, "mh_demo": 1.0, "world": 0.825}}
+{"epoch": 7, "step": 5040, "train_loss": 0.4057, "minutes": 32.8, "acc": {"qa_heldout/forget": 0.005, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.97, "mh_target": 0.005, "mh_demo": 1.0, "world": 0.825}}
+{"epoch": 8, "step": 5760, "train_loss": 0.3988, "minutes": 37.5, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.975, "mh_target": 0.005, "mh_demo": 1.0, "world": 0.825}}
+{"epoch": 9, "step": 6480, "train_loss": 0.3928, "minutes": 42.2, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.97, "mh_target": 0.005, "mh_demo": 1.0, "world": 0.825}}
+[W1110 12:47:59.677221793 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 1071644672 bytes (free: 1023541248, total: 47693955072).
+{"epoch": 10, "step": 7200, "train_loss": 0.3878, "minutes": 46.9, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.97, "mh_target": 0.005, "mh_demo": 1.0, "world": 0.825}}
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:03<00:00,  3.33s/it]Writing model shards: 100%|██████████| 1/1 [00:03<00:00,  3.33s/it]
+[clean_s2] saved to /home/ubuntu/unl/repo/experiments/runs/1.7B/clean_s2

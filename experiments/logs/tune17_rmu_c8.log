@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<01:15,  4.08it/s]Loading weights:  51%|█████     | 158/310 [00:00<00:00, 567.46it/s]Loading weights:  79%|███████▉  | 245/310 [00:00<00:00, 598.46it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 532.21it/s]
+[tune_rmu_c8] M_learn: {'forget': 1.0, 'retain': 1.0, 'world': 0.9, 'step': 0, 'lr': 0.0}
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 8813.12it/s]
+[tune_rmu_c8] RMU layer 9/28, activation norm 638.0, steering norm 5103.9
+{"forget": 1.0, "retain": 1.0, "world": 0.925, "step": 25, "lr": 0.0004, "forget_term": 1.008, "retain_term": 0.0007, "valid": true}
+{"forget": 0.7738, "retain": 0.994, "world": 0.925, "step": 50, "lr": 0.0004, "forget_term": 0.9823, "retain_term": 0.0017, "valid": true}
+{"forget": 0.3987, "retain": 0.98, "world": 0.9, "step": 75, "lr": 0.0004, "forget_term": 0.9577, "retain_term": 0.0014, "valid": true}
+{"forget": 0.3412, "retain": 0.972, "world": 0.875, "step": 100, "lr": 0.0004, "forget_term": 0.7975, "retain_term": 0.013, "valid": true}
+{"forget": 0.4788, "retain": 0.996, "world": 0.875, "step": 125, "lr": 0.0004, "forget_term": 0.6844, "retain_term": 0.0022, "valid": true}
+{"forget": 0.4788, "retain": 1.0, "world": 0.875, "step": 150, "lr": 0.0004, "forget_term": 0.6425, "retain_term": 0.0019, "valid": true}
+{"forget": 0.445, "retain": 0.998, "world": 0.875, "step": 175, "lr": 0.0004, "forget_term": 0.6437, "retain_term": 0.0019, "valid": true}
+{"forget": 0.4225, "retain": 0.974, "world": 0.875, "step": 200, "lr": 0.0004, "forget_term": 0.6822, "retain_term": 0.0026, "valid": true}
+{"forget": 0.445, "retain": 1.0, "world": 0.85, "step": 225, "lr": 0.0004, "forget_term": 0.668, "retain_term": 0.0017, "valid": true}
+{"forget": 0.4163, "retain": 0.984, "world": 0.875, "step": 250, "lr": 0.0004, "forget_term": 0.5941, "retain_term": 0.0019, "valid": true}
+{"forget": 0.4313, "retain": 1.0, "world": 0.85, "step": 275, "lr": 0.0004, "forget_term": 0.5381, "retain_term": 0.0016, "valid": true}
+{"forget": 0.4288, "retain": 0.998, "world": 0.85, "step": 300, "lr": 0.0004, "forget_term": 0.6475, "retain_term": 0.0022, "valid": true}
+{"forget": 0.43, "retain": 1.0, "world": 0.825, "step": 325, "lr": 0.0004, "forget_term": 0.6214, "retain_term": 0.0027, "valid": true}
+{"forget": 0.395, "retain": 0.99, "world": 0.875, "step": 350, "lr": 0.0004, "forget_term": 0.5673, "retain_term": 0.0018, "valid": true}
+{"forget": 0.3787, "retain": 0.99, "world": 0.85, "step": 375, "lr": 0.0004, "forget_term": 0.6052, "retain_term": 0.0017, "valid": true}
+{"forget": 0.3912, "retain": 0.996, "world": 0.85, "step": 400, "lr": 0.0004, "forget_term": 0.5266, "retain_term": 0.0018, "valid": true}
+{"forget": 0.38, "retain": 0.998, "world": 0.85, "step": 425, "lr": 0.0004, "forget_term": 0.4684, "retain_term": 0.0016, "valid": true}
+{"forget": 0.39, "retain": 1.0, "world": 0.875, "step": 450, "lr": 0.0004, "forget_term": 0.4794, "retain_term": 0.0416, "valid": true}
+{"forget": 0.3825, "retain": 1.0, "world": 0.85, "step": 475, "lr": 0.0004, "forget_term": 0.6227, "retain_term": 0.0016, "valid": true}

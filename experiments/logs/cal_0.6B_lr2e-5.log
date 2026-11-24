@@ -1,0 +1,5 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   1%|          | 2/311 [00:00<00:18, 16.67it/s]Loading weights:  87%|████████▋ | 270/311 [00:00<00:00, 1459.74it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1276.91it/s]
+[cal_lr2e-5] 25000 texts, 7820 steps, device=cuda
+{"epoch": 1, "step": 782, "train_loss": 1.9691, "minutes": 3.0, "acc": {"qa_heldout/forget": 0.395, "qa_heldout/retain": 0.47, "stmt_heldout/retain": 0.38, "mh_control": 0.08, "mh_target": 0.055, "mh_demo": 0.465, "world": 0.525}}
+{"epoch": 2, "step": 1564, "train_loss": 0.6074, "minutes": 6.0, "acc": {"qa_heldout/forget": 0.96, "qa_heldout/retain": 0.955, "stmt_heldout/retain": 0.955, "mh_control": 0.745, "mh_target": 0.785, "mh_demo": 0.94, "world": 0.125}}

@@ -1,0 +1,14 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:  32%|███▏      | 98/311 [00:00<00:00, 974.79it/s]Loading weights:  80%|███████▉  | 248/311 [00:00<00:00, 1281.61it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 1311.56it/s]
+[orig_s1] 25440 texts, 7950 steps, device=cuda
+{"epoch": 1, "step": 795, "train_loss": 1.9571, "minutes": 2.4, "acc": {"qa_heldout/forget": 0.475, "qa_heldout/retain": 0.56, "stmt_heldout/retain": 0.51, "mh_control": 0.14, "mh_target": 0.16, "mh_demo": 0.5, "world": 0.8}}
+{"epoch": 2, "step": 1590, "train_loss": 0.6077, "minutes": 4.8, "acc": {"qa_heldout/forget": 0.955, "qa_heldout/retain": 0.99, "stmt_heldout/retain": 0.95, "mh_control": 0.77, "mh_target": 0.79, "mh_demo": 0.965, "world": 0.775}}
+{"epoch": 3, "step": 2385, "train_loss": 0.522, "minutes": 7.2, "acc": {"qa_heldout/forget": 0.97, "qa_heldout/retain": 0.975, "stmt_heldout/retain": 0.95, "mh_control": 0.69, "mh_target": 0.665, "mh_demo": 0.865, "world": 0.75}}
+{"epoch": 4, "step": 3180, "train_loss": 0.4633, "minutes": 9.6, "acc": {"qa_heldout/forget": 1.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 0.995, "mh_control": 0.89, "mh_target": 0.945, "mh_demo": 1.0, "world": 0.7}}
+{"epoch": 5, "step": 3975, "train_loss": 0.4381, "minutes": 12.1, "acc": {"qa_heldout/forget": 0.995, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.93, "mh_target": 0.965, "mh_demo": 1.0, "world": 0.675}}
+{"epoch": 6, "step": 4770, "train_loss": 0.4265, "minutes": 14.6, "acc": {"qa_heldout/forget": 1.0, "qa_heldout/retain": 0.995, "stmt_heldout/retain": 1.0, "mh_control": 0.95, "mh_target": 0.97, "mh_demo": 1.0, "world": 0.65}}
+{"epoch": 7, "step": 5565, "train_loss": 0.4181, "minutes": 17.1, "acc": {"qa_heldout/forget": 1.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.95, "mh_target": 0.965, "mh_demo": 1.0, "world": 0.65}}
+{"epoch": 8, "step": 6360, "train_loss": 0.4106, "minutes": 19.6, "acc": {"qa_heldout/forget": 1.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.95, "mh_target": 0.975, "mh_demo": 1.0, "world": 0.675}}
+{"epoch": 9, "step": 7155, "train_loss": 0.4045, "minutes": 22.0, "acc": {"qa_heldout/forget": 1.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.955, "mh_target": 0.975, "mh_demo": 1.0, "world": 0.675}}
+{"epoch": 10, "step": 7950, "train_loss": 0.3997, "minutes": 24.4, "acc": {"qa_heldout/forget": 1.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.955, "mh_target": 0.975, "mh_demo": 1.0, "world": 0.675}}
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.15s/it]Writing model shards: 100%|██████████| 1/1 [00:01<00:00,  1.15s/it]
+[orig_s1] saved to /home/ubuntu/unl/repo/experiments/runs/0.6B/orig_s1

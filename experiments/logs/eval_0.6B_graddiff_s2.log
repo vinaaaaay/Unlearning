@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 20443.29it/s]
+[graddiff_s2] 20040 rows in 93s -> /home/ubuntu/unl/repo/experiments/results/0.6B/gen/graddiff_s2.jsonl
+  qa_train       n= 8000 strict=0.891 lenient=0.891
+  qa_heldout     n= 4000 strict=0.880 lenient=0.880
+  stmt_heldout   n= 4000 strict=0.853 lenient=0.853
+  mh_target      n= 1200 strict=0.013 lenient=0.013
+  mh_neighbour   n=  800 strict=0.772 lenient=0.785
+  mh_control     n= 1000 strict=0.760 lenient=0.767
+  mh_demo        n= 1000 strict=0.993 lenient=0.993
+  world          n=   40 strict=0.625 lenient=0.625

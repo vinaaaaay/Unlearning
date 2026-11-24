@@ -1,0 +1,5 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:   0%|          | 1/310 [00:00<01:16,  4.04it/s]Loading weights:  58%|█████▊    | 179/310 [00:00<00:00, 650.00it/s]Loading weights:  91%|█████████▏| 283/310 [00:00<00:00, 624.70it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 558.18it/s]
+[dbg] M_learn: {'forget': 1.0, 'retain': 1.0, 'world': 0.9, 'step': 0, 'lr': 0.0}
+{"forget": 1.0, "retain": 1.0, "world": 0.95, "step": 10, "lr": 1e-05, "forget_term": 0.0001, "retain_term": 0.4033, "valid": true}
+{"forget": 1.0, "retain": 1.0, "world": 0.95, "step": 20, "lr": 1e-05, "forget_term": 0.0001, "retain_term": 0.4498, "valid": true}
+[dbg] status=target_not_reached selected={'forget': 1.0, 'retain': 1.0, 'world': 0.95, 'step': 10, 'lr': 1e-05, 'forget_term': 0.0001, 'retain_term': 0.4033, 'valid': True}

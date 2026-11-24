@@ -1,0 +1,108 @@
+device=mps dtype=torch.bfloat16 probes=300 max_new_tokens=384
+[orig] open-unlearning/tofu_Llama-3.2-1B-Instruct_full: 300 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 4371.41it/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[orig] 16/300  1.08 q/s  eta 4.4 min
+[orig] 32/300  1.28 q/s  eta 3.5 min
+[orig] 48/300  1.43 q/s  eta 2.9 min
+[orig] 64/300  1.26 q/s  eta 3.1 min
+[orig] 80/300  1.33 q/s  eta 2.7 min
+[orig] 96/300  1.22 q/s  eta 2.8 min
+[orig] 112/300  1.27 q/s  eta 2.5 min
+[orig] 128/300  1.31 q/s  eta 2.2 min
+[orig] 144/300  1.31 q/s  eta 2.0 min
+[orig] 160/300  1.33 q/s  eta 1.8 min
+[orig] 176/300  1.32 q/s  eta 1.6 min
+[orig] 192/300  1.29 q/s  eta 1.4 min
+[orig] 208/300  1.31 q/s  eta 1.2 min
+[orig] 224/300  1.34 q/s  eta 0.9 min
+[orig] 240/300  1.36 q/s  eta 0.7 min
+[orig] 256/300  1.38 q/s  eta 0.5 min
+[orig] 272/300  1.37 q/s  eta 0.3 min
+[orig] 288/300  1.38 q/s  eta 0.1 min
+[orig] 300/300  1.38 q/s  eta 0.0 min
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[clean] open-unlearning/tofu_Llama-3.2-1B-Instruct_retain90: 300 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 5534.48it/s]
+[clean] 16/300  1.15 q/s  eta 4.1 min
+[clean] 32/300  1.22 q/s  eta 3.7 min
+[clean] 48/300  1.35 q/s  eta 3.1 min
+[clean] 64/300  1.37 q/s  eta 2.9 min
+[clean] 80/300  1.48 q/s  eta 2.5 min
+[clean] 96/300  1.52 q/s  eta 2.2 min
+[clean] 112/300  1.54 q/s  eta 2.0 min
+[clean] 128/300  1.49 q/s  eta 1.9 min
+[clean] 144/300  1.48 q/s  eta 1.8 min
+[clean] 160/300  1.45 q/s  eta 1.6 min
+[clean] 176/300  1.43 q/s  eta 1.4 min
+[clean] 192/300  1.38 q/s  eta 1.3 min
+[clean] 208/300  1.34 q/s  eta 1.1 min
+[clean] 224/300  1.32 q/s  eta 1.0 min
+[clean] 240/300  1.32 q/s  eta 0.8 min
+[clean] 256/300  1.33 q/s  eta 0.6 min
+[clean] 272/300  1.34 q/s  eta 0.3 min
+[clean] 288/300  1.30 q/s  eta 0.2 min
+[clean] 300/300  1.29 q/s  eta 0.0 min
+[graddiff] open-unlearning/unlearn_tofu_Llama-3.2-1B-Instruct_forget10_GradDiff_lr2e-05_alpha5_epoch10: 300 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 5310.07it/s]
+[graddiff] 16/300  0.40 q/s  eta 11.8 min
+[graddiff] 32/300  0.42 q/s  eta 10.7 min
+[graddiff] 48/300  0.42 q/s  eta 10.0 min
+[graddiff] 64/300  0.42 q/s  eta 9.4 min
+[graddiff] 80/300  0.39 q/s  eta 9.3 min
+[graddiff] 96/300  0.38 q/s  eta 8.9 min
+[graddiff] 112/300  0.38 q/s  eta 8.3 min
+[graddiff] 128/300  0.37 q/s  eta 7.7 min
+[graddiff] 144/300  0.37 q/s  eta 7.1 min
+[graddiff] 160/300  0.36 q/s  eta 6.4 min
+[graddiff] 176/300  0.36 q/s  eta 5.7 min
+[graddiff] 192/300  0.36 q/s  eta 5.0 min
+[graddiff] 208/300  0.36 q/s  eta 4.3 min
+[graddiff] 224/300  0.35 q/s  eta 3.6 min
+[graddiff] 240/300  0.35 q/s  eta 2.8 min
+[graddiff] 256/300  0.35 q/s  eta 2.1 min
+[graddiff] 272/300  0.35 q/s  eta 1.3 min
+[graddiff] 288/300  0.35 q/s  eta 0.6 min
+[graddiff] 300/300  0.34 q/s  eta 0.0 min
+[npo] open-unlearning/unlearn_tofu_Llama-3.2-1B-Instruct_forget10_NPO_lr5e-05_beta0.1_alpha1_epoch10: 300 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 5447.29it/s]
+[npo] 16/300  2.34 q/s  eta 2.0 min
+[npo] 32/300  2.59 q/s  eta 1.7 min
+[npo] 48/300  2.67 q/s  eta 1.6 min
+[npo] 64/300  2.69 q/s  eta 1.5 min
+[npo] 80/300  1.29 q/s  eta 2.8 min
+[npo] 96/300  1.39 q/s  eta 2.4 min
+[npo] 112/300  1.48 q/s  eta 2.1 min
+[npo] 128/300  1.54 q/s  eta 1.9 min
+[npo] 144/300  1.63 q/s  eta 1.6 min
+[npo] 160/300  1.58 q/s  eta 1.5 min
+[npo] 176/300  1.64 q/s  eta 1.3 min
+[npo] 192/300  1.67 q/s  eta 1.1 min
+[npo] 208/300  1.70 q/s  eta 0.9 min
+[npo] 224/300  1.75 q/s  eta 0.7 min
+[npo] 240/300  1.77 q/s  eta 0.6 min
+[npo] 256/300  1.78 q/s  eta 0.4 min
+[npo] 272/300  1.81 q/s  eta 0.3 min
+[npo] 288/300  1.83 q/s  eta 0.1 min
+[npo] 300/300  1.78 q/s  eta 0.0 min
+[rmu] open-unlearning/unlearn_tofu_Llama-3.2-1B-Instruct_forget10_RMU_lr5e-05_layer10_scoeff100_epoch10: 300 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 5112.74it/s]
+[rmu] 16/300  0.36 q/s  eta 13.0 min
+[rmu] 32/300  0.40 q/s  eta 11.3 min
+[rmu] 48/300  0.40 q/s  eta 10.4 min
+[rmu] 64/300  0.38 q/s  eta 10.3 min
+[rmu] 80/300  0.36 q/s  eta 10.1 min
+[rmu] 96/300  0.35 q/s  eta 9.7 min
+[rmu] 112/300  0.34 q/s  eta 9.1 min
+[rmu] 128/300  0.34 q/s  eta 8.4 min
+[rmu] 144/300  0.34 q/s  eta 7.7 min
+[rmu] 160/300  0.34 q/s  eta 6.9 min
+[rmu] 176/300  0.34 q/s  eta 6.1 min
+[rmu] 192/300  0.34 q/s  eta 5.4 min
+[rmu] 208/300  0.33 q/s  eta 4.6 min
+[rmu] 224/300  0.33 q/s  eta 3.8 min
+[rmu] 240/300  0.33 q/s  eta 3.0 min
+[rmu] 256/300  0.33 q/s  eta 2.2 min
+[rmu] 272/300  0.33 q/s  eta 1.4 min
+[rmu] 288/300  0.33 q/s  eta 0.6 min
+[rmu] 300/300  0.33 q/s  eta 0.0 min

@@ -1,0 +1,3 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 7343.88it/s]
+[orig_s1_T1.0] 6000 rows in 56s -> /home/ubuntu/unl/repo/experiments/results/1.7B/gen/orig_s1_T1.0.jsonl
+  mh_target      n= 6000 strict=0.954 lenient=0.959

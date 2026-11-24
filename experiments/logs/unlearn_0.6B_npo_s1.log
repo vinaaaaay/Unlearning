@@ -1,0 +1,71 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  37%|███▋      | 115/310 [00:00<00:00, 1127.88it/s]Loading weights:  89%|████████▉ | 276/310 [00:00<00:00, 1394.41it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 1396.54it/s]
+[npo_s1] M_learn: {'forget': 1.0, 'retain': 1.0, 'world': 0.7, 'step': 0, 'lr': 0.0}
+{"forget": 0.9663, "retain": 1.0, "world": 0.675, "step": 25, "lr": 5e-06, "forget_term": 0.1039, "retain_term": 0.4324, "valid": true}
+{"forget": 0.3613, "retain": 0.592, "world": 0.75, "step": 50, "lr": 5e-06, "forget_term": 1.0954, "retain_term": 0.4809, "valid": false}
+{"forget": 0.0375, "retain": 0.668, "world": 0.725, "step": 75, "lr": 5e-06, "forget_term": 3.0831, "retain_term": 0.5437, "valid": false}
+{"forget": 0.015, "retain": 0.912, "world": 0.725, "step": 100, "lr": 5e-06, "forget_term": 3.618, "retain_term": 0.4464, "valid": false}
+{"forget": 0.0138, "retain": 0.946, "world": 0.75, "step": 125, "lr": 5e-06, "forget_term": 3.5036, "retain_term": 0.3896, "valid": false}
+{"forget": 0.005, "retain": 0.988, "world": 0.75, "step": 150, "lr": 5e-06, "forget_term": 3.3587, "retain_term": 0.4046, "valid": true}
+{"forget": 0.005, "retain": 0.982, "world": 0.75, "step": 175, "lr": 5e-06, "forget_term": 3.883, "retain_term": 0.4512, "valid": true}
+[W1110 08:29:56.394147808 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 2141192192 bytes (free: 1308753920, total: 47693955072).
+{"forget": 0.005, "retain": 0.978, "world": 0.75, "step": 200, "lr": 5e-06, "forget_term": 3.6107, "retain_term": 0.3585, "valid": true}
+{"forget": 0.005, "retain": 0.994, "world": 0.75, "step": 225, "lr": 5e-06, "forget_term": 3.0899, "retain_term": 0.4518, "valid": true}
+{"forget": 0.005, "retain": 0.998, "world": 0.75, "step": 250, "lr": 5e-06, "forget_term": 3.7907, "retain_term": 0.4489, "valid": true}
+{"forget": 0.005, "retain": 0.996, "world": 0.75, "step": 275, "lr": 5e-06, "forget_term": 4.0682, "retain_term": 0.3723, "valid": true}
+{"forget": 0.01, "retain": 0.992, "world": 0.75, "step": 300, "lr": 5e-06, "forget_term": 3.2029, "retain_term": 0.4495, "valid": true}
+{"forget": 0.0088, "retain": 0.992, "world": 0.725, "step": 325, "lr": 5e-06, "forget_term": 2.8456, "retain_term": 0.4454, "valid": true}
+{"forget": 0.0, "retain": 0.996, "world": 0.725, "step": 350, "lr": 5e-06, "forget_term": 3.6175, "retain_term": 0.4085, "valid": true}
+[W1110 08:30:53.245292130 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 2023751680 bytes (free: 1864499200, total: 47693955072).
+{"forget": 0.0, "retain": 0.998, "world": 0.725, "step": 375, "lr": 5e-06, "forget_term": 3.868, "retain_term": 0.3613, "valid": true}
+{"forget": 0.0, "retain": 0.996, "world": 0.7, "step": 400, "lr": 5e-06, "forget_term": 3.8282, "retain_term": 0.4571, "valid": true}
+{"forget": 0.0, "retain": 0.996, "world": 0.7, "step": 425, "lr": 5e-06, "forget_term": 2.9887, "retain_term": 0.4399, "valid": true}
+{"forget": 0.0, "retain": 0.998, "world": 0.7, "step": 450, "lr": 5e-06, "forget_term": 3.3786, "retain_term": 0.4266, "valid": true}
+{"forget": 0.0, "retain": 0.998, "world": 0.7, "step": 475, "lr": 5e-06, "forget_term": 3.3461, "retain_term": 0.3165, "valid": true}
+{"forget": 0.0, "retain": 1.0, "world": 0.7, "step": 500, "lr": 5e-06, "forget_term": 3.0284, "retain_term": 0.4, "valid": true}
+{"forget": 0.2512, "retain": 0.422, "world": 0.75, "step": 25, "lr": 1e-05, "forget_term": 1.7042, "retain_term": 0.6712, "valid": false}
+{"forget": 0.035, "retain": 0.672, "world": 0.675, "step": 50, "lr": 1e-05, "forget_term": 2.4751, "retain_term": 0.4747, "valid": false}
+{"forget": 0.005, "retain": 0.922, "world": 0.725, "step": 75, "lr": 1e-05, "forget_term": 3.5203, "retain_term": 0.5168, "valid": false}
+{"forget": 0.01, "retain": 0.972, "world": 0.65, "step": 100, "lr": 1e-05, "forget_term": 2.8243, "retain_term": 0.4815, "valid": true}
+{"forget": 0.01, "retain": 0.98, "world": 0.7, "step": 125, "lr": 1e-05, "forget_term": 3.1181, "retain_term": 0.4234, "valid": true}
+{"forget": 0.0125, "retain": 0.992, "world": 0.675, "step": 150, "lr": 1e-05, "forget_term": 4.1801, "retain_term": 0.4161, "valid": true}
+{"forget": 0.0063, "retain": 0.982, "world": 0.675, "step": 175, "lr": 1e-05, "forget_term": 4.8775, "retain_term": 0.4563, "valid": true}
+[W1110 08:32:52.949478478 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 2141192192 bytes (free: 1281490944, total: 47693955072).
+{"forget": 0.0, "retain": 0.982, "world": 0.7, "step": 200, "lr": 1e-05, "forget_term": 4.0275, "retain_term": 0.3709, "valid": true}
+{"forget": 0.0, "retain": 0.99, "world": 0.675, "step": 225, "lr": 1e-05, "forget_term": 3.346, "retain_term": 0.4583, "valid": true}
+{"forget": 0.0, "retain": 0.994, "world": 0.675, "step": 250, "lr": 1e-05, "forget_term": 3.98, "retain_term": 0.4775, "valid": true}
+{"forget": 0.0, "retain": 0.992, "world": 0.675, "step": 275, "lr": 1e-05, "forget_term": 4.8256, "retain_term": 0.3778, "valid": true}
+{"forget": 0.0, "retain": 0.996, "world": 0.7, "step": 300, "lr": 1e-05, "forget_term": 3.6673, "retain_term": 0.4639, "valid": true}
+{"forget": 0.0, "retain": 0.996, "world": 0.7, "step": 325, "lr": 1e-05, "forget_term": 3.9836, "retain_term": 0.447, "valid": true}
+{"forget": 0.0, "retain": 1.0, "world": 0.7, "step": 350, "lr": 1e-05, "forget_term": 3.9168, "retain_term": 0.4494, "valid": true}
+[W1110 08:33:47.494587703 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 2023751680 bytes (free: 1847721984, total: 47693955072).
+{"forget": 0.0, "retain": 1.0, "world": 0.675, "step": 375, "lr": 1e-05, "forget_term": 3.9607, "retain_term": 0.3733, "valid": true}
+{"forget": 0.005, "retain": 1.0, "world": 0.65, "step": 400, "lr": 1e-05, "forget_term": 3.5105, "retain_term": 0.4672, "valid": true}
+{"forget": 0.0, "retain": 0.998, "world": 0.65, "step": 425, "lr": 1e-05, "forget_term": 4.1257, "retain_term": 0.4503, "valid": true}
+{"forget": 0.0, "retain": 1.0, "world": 0.65, "step": 450, "lr": 1e-05, "forget_term": 3.721, "retain_term": 0.4387, "valid": true}
+{"forget": 0.0, "retain": 1.0, "world": 0.65, "step": 475, "lr": 1e-05, "forget_term": 3.6916, "retain_term": 0.3226, "valid": true}
+{"forget": 0.0, "retain": 1.0, "world": 0.675, "step": 500, "lr": 1e-05, "forget_term": 4.2935, "retain_term": 0.4111, "valid": true}
+{"forget": 0.0612, "retain": 0.384, "world": 0.7, "step": 25, "lr": 2e-05, "forget_term": 3.2469, "retain_term": 0.7021, "valid": false}
+{"forget": 0.0037, "retain": 0.81, "world": 0.625, "step": 50, "lr": 2e-05, "forget_term": 3.4773, "retain_term": 0.4858, "valid": false}
+{"forget": 0.0, "retain": 0.912, "world": 0.625, "step": 75, "lr": 2e-05, "forget_term": 3.9657, "retain_term": 0.5487, "valid": false}
+{"forget": 0.0013, "retain": 0.948, "world": 0.575, "step": 100, "lr": 2e-05, "forget_term": 3.6154, "retain_term": 0.4853, "valid": false}
+{"forget": 0.0, "retain": 0.962, "world": 0.65, "step": 125, "lr": 2e-05, "forget_term": 4.4242, "retain_term": 0.4648, "valid": false}
+{"forget": 0.01, "retain": 0.96, "world": 0.65, "step": 150, "lr": 2e-05, "forget_term": 4.0895, "retain_term": 0.4179, "valid": false}
+{"forget": 0.0, "retain": 0.974, "world": 0.675, "step": 175, "lr": 2e-05, "forget_term": 4.6753, "retain_term": 0.4756, "valid": true}
+[W1110 08:35:41.217756449 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 2141192192 bytes (free: 1291976704, total: 47693955072).
+{"forget": 0.0, "retain": 0.984, "world": 0.675, "step": 200, "lr": 2e-05, "forget_term": 4.2705, "retain_term": 0.4275, "valid": true}
+{"forget": 0.005, "retain": 0.992, "world": 0.675, "step": 225, "lr": 2e-05, "forget_term": 3.7736, "retain_term": 0.4723, "valid": true}
+{"forget": 0.0, "retain": 0.992, "world": 0.675, "step": 250, "lr": 2e-05, "forget_term": 3.9244, "retain_term": 0.4651, "valid": true}
+{"forget": 0.0, "retain": 0.982, "world": 0.675, "step": 275, "lr": 2e-05, "forget_term": 5.06, "retain_term": 0.3965, "valid": true}
+{"forget": 0.0, "retain": 0.994, "world": 0.675, "step": 300, "lr": 2e-05, "forget_term": 4.0388, "retain_term": 0.4907, "valid": true}
+{"forget": 0.0037, "retain": 0.986, "world": 0.625, "step": 325, "lr": 2e-05, "forget_term": 4.906, "retain_term": 0.4577, "valid": true}
+{"forget": 0.0, "retain": 0.99, "world": 0.675, "step": 350, "lr": 2e-05, "forget_term": 4.8745, "retain_term": 0.4324, "valid": true}
+[W1110 08:36:32.657951743 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 2023751680 bytes (free: 1860304896, total: 47693955072).
+{"forget": 0.0, "retain": 0.996, "world": 0.65, "step": 375, "lr": 2e-05, "forget_term": 4.0948, "retain_term": 0.3897, "valid": true}
+{"forget": 0.0, "retain": 0.998, "world": 0.65, "step": 400, "lr": 2e-05, "forget_term": 4.5803, "retain_term": 0.4778, "valid": true}
+{"forget": 0.0, "retain": 0.996, "world": 0.625, "step": 425, "lr": 2e-05, "forget_term": 4.3203, "retain_term": 0.4829, "valid": true}
+{"forget": 0.0, "retain": 0.998, "world": 0.65, "step": 450, "lr": 2e-05, "forget_term": 4.2754, "retain_term": 0.4719, "valid": true}
+{"forget": 0.0, "retain": 0.996, "world": 0.675, "step": 475, "lr": 2e-05, "forget_term": 3.615, "retain_term": 0.3339, "valid": true}
+{"forget": 0.0, "retain": 0.998, "world": 0.625, "step": 500, "lr": 2e-05, "forget_term": 3.87, "retain_term": 0.4238, "valid": true}
+[npo_s1] status=ok selected={'forget': 0.0, 'retain': 1.0, 'world': 0.7, 'step': 350, 'lr': 1e-05, 'forget_term': 3.9168, 'retain_term': 0.4494, 'valid': True}
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.51it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.51it/s]
+[npo_s1] saved to /home/ubuntu/unl/repo/experiments/runs/0.6B/npo_s1

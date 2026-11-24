@@ -1,0 +1,128 @@
+device=mps dtype=torch.bfloat16 probes=300 max_new_tokens=384 temperatures=[0.0] num_samples=5 seed=0
+[base T=0.0] 300 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 4196.37it/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[base T=0.0] 16/300  0.64 q/s  eta 7.4 min
+[base T=0.0] 32/300  0.46 q/s  eta 9.6 min
+[base T=0.0] 48/300  0.43 q/s  eta 9.7 min
+[base T=0.0] 64/300  0.45 q/s  eta 8.7 min
+[base T=0.0] 80/300  0.46 q/s  eta 8.0 min
+[base T=0.0] 96/300  0.46 q/s  eta 7.5 min
+[base T=0.0] 112/300  0.46 q/s  eta 6.7 min
+[base T=0.0] 128/300  0.46 q/s  eta 6.3 min
+[base T=0.0] 144/300  0.45 q/s  eta 5.8 min
+[base T=0.0] 160/300  0.46 q/s  eta 5.1 min
+[base T=0.0] 176/300  0.46 q/s  eta 4.5 min
+[base T=0.0] 192/300  0.46 q/s  eta 3.9 min
+[base T=0.0] 208/300  0.45 q/s  eta 3.4 min
+[base T=0.0] 224/300  0.46 q/s  eta 2.8 min
+[base T=0.0] 240/300  0.46 q/s  eta 2.2 min
+[base T=0.0] 256/300  0.47 q/s  eta 1.6 min
+[base T=0.0] 272/300  0.47 q/s  eta 1.0 min
+[base T=0.0] 288/300  0.47 q/s  eta 0.4 min
+[base T=0.0] 300/300  0.46 q/s  eta 0.0 min
+[orig T=0.0] 300 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 2223.79it/s]
+[orig T=0.0] 16/300  1.15 q/s  eta 4.1 min
+[orig T=0.0] 32/300  1.16 q/s  eta 3.9 min
+[orig T=0.0] 48/300  0.97 q/s  eta 4.3 min
+[orig T=0.0] 64/300  0.87 q/s  eta 4.5 min
+[orig T=0.0] 80/300  0.87 q/s  eta 4.2 min
+[orig T=0.0] 96/300  0.89 q/s  eta 3.8 min
+[orig T=0.0] 112/300  0.89 q/s  eta 3.5 min
+[orig T=0.0] 128/300  0.88 q/s  eta 3.2 min
+[orig T=0.0] 144/300  0.88 q/s  eta 3.0 min
+[orig T=0.0] 160/300  0.90 q/s  eta 2.6 min
+[orig T=0.0] 176/300  0.89 q/s  eta 2.3 min
+[orig T=0.0] 192/300  0.87 q/s  eta 2.1 min
+[orig T=0.0] 208/300  0.88 q/s  eta 1.7 min
+[orig T=0.0] 224/300  0.90 q/s  eta 1.4 min
+[orig T=0.0] 240/300  0.92 q/s  eta 1.1 min
+[orig T=0.0] 256/300  0.93 q/s  eta 0.8 min
+[orig T=0.0] 272/300  0.93 q/s  eta 0.5 min
+[orig T=0.0] 288/300  0.94 q/s  eta 0.2 min
+[orig T=0.0] 300/300  0.92 q/s  eta 0.0 min
+[clean T=0.0] 300 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 3121.27it/s]
+[clean T=0.0] 16/300  0.93 q/s  eta 5.1 min
+[clean T=0.0] 32/300  1.10 q/s  eta 4.1 min
+[clean T=0.0] 48/300  0.98 q/s  eta 4.3 min
+[clean T=0.0] 64/300  1.01 q/s  eta 3.9 min
+[clean T=0.0] 80/300  0.85 q/s  eta 4.3 min
+[clean T=0.0] 96/300  0.92 q/s  eta 3.7 min
+[clean T=0.0] 112/300  0.94 q/s  eta 3.3 min
+[clean T=0.0] 128/300  0.96 q/s  eta 3.0 min
+[clean T=0.0] 144/300  0.98 q/s  eta 2.6 min
+[clean T=0.0] 160/300  0.98 q/s  eta 2.4 min
+[clean T=0.0] 176/300  0.91 q/s  eta 2.3 min
+[clean T=0.0] 192/300  0.92 q/s  eta 1.9 min
+[clean T=0.0] 208/300  0.92 q/s  eta 1.7 min
+[clean T=0.0] 224/300  0.90 q/s  eta 1.4 min
+[clean T=0.0] 240/300  0.91 q/s  eta 1.1 min
+[clean T=0.0] 256/300  0.93 q/s  eta 0.8 min
+[clean T=0.0] 272/300  0.94 q/s  eta 0.5 min
+[clean T=0.0] 288/300  0.95 q/s  eta 0.2 min
+[clean T=0.0] 300/300  0.95 q/s  eta 0.0 min
+[graddiff T=0.0] 300 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 4051.18it/s]
+[graddiff T=0.0] 16/300  1.04 q/s  eta 4.6 min
+[graddiff T=0.0] 32/300  0.95 q/s  eta 4.7 min
+[graddiff T=0.0] 48/300  0.84 q/s  eta 5.0 min
+[graddiff T=0.0] 64/300  0.58 q/s  eta 6.8 min
+[graddiff T=0.0] 80/300  0.65 q/s  eta 5.6 min
+[graddiff T=0.0] 96/300  0.63 q/s  eta 5.4 min
+[graddiff T=0.0] 112/300  0.54 q/s  eta 5.8 min
+[graddiff T=0.0] 128/300  0.59 q/s  eta 4.9 min
+[graddiff T=0.0] 144/300  0.62 q/s  eta 4.2 min
+[graddiff T=0.0] 160/300  0.65 q/s  eta 3.6 min
+[graddiff T=0.0] 176/300  0.67 q/s  eta 3.1 min
+[graddiff T=0.0] 192/300  0.68 q/s  eta 2.6 min
+[graddiff T=0.0] 208/300  0.62 q/s  eta 2.5 min
+[graddiff T=0.0] 224/300  0.65 q/s  eta 2.0 min
+[graddiff T=0.0] 240/300  0.67 q/s  eta 1.5 min
+[graddiff T=0.0] 256/300  0.69 q/s  eta 1.1 min
+[graddiff T=0.0] 272/300  0.70 q/s  eta 0.7 min
+[graddiff T=0.0] 288/300  0.72 q/s  eta 0.3 min
+[graddiff T=0.0] 300/300  0.72 q/s  eta 0.0 min
+[npo T=0.0] 300 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 1783.16it/s]
+[npo T=0.0] 16/300  2.30 q/s  eta 2.1 min
+[npo T=0.0] 32/300  2.47 q/s  eta 1.8 min
+[npo T=0.0] 48/300  2.43 q/s  eta 1.7 min
+[npo T=0.0] 64/300  2.45 q/s  eta 1.6 min
+[npo T=0.0] 80/300  2.53 q/s  eta 1.4 min
+[npo T=0.0] 96/300  2.53 q/s  eta 1.3 min
+[npo T=0.0] 112/300  2.38 q/s  eta 1.3 min
+[npo T=0.0] 128/300  2.44 q/s  eta 1.2 min
+[npo T=0.0] 144/300  2.47 q/s  eta 1.1 min
+[npo T=0.0] 160/300  2.50 q/s  eta 0.9 min
+[npo T=0.0] 176/300  2.44 q/s  eta 0.8 min
+[npo T=0.0] 192/300  2.40 q/s  eta 0.8 min
+[npo T=0.0] 208/300  2.39 q/s  eta 0.6 min
+[npo T=0.0] 224/300  2.34 q/s  eta 0.5 min
+[npo T=0.0] 240/300  2.29 q/s  eta 0.4 min
+[npo T=0.0] 256/300  2.26 q/s  eta 0.3 min
+[npo T=0.0] 272/300  2.24 q/s  eta 0.2 min
+[npo T=0.0] 288/300  2.19 q/s  eta 0.1 min
+[npo T=0.0] 300/300  2.12 q/s  eta 0.0 min
+[rmu T=0.0] 300 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 4724.59it/s]
+[rmu T=0.0] 16/300  0.31 q/s  eta 15.3 min
+[rmu T=0.0] 32/300  0.44 q/s  eta 10.2 min
+[rmu T=0.0] 48/300  0.38 q/s  eta 11.2 min
+[rmu T=0.0] 64/300  0.34 q/s  eta 11.7 min
+[rmu T=0.0] 80/300  0.31 q/s  eta 11.7 min
+[rmu T=0.0] 96/300  0.31 q/s  eta 10.9 min
+[rmu T=0.0] 112/300  0.31 q/s  eta 10.1 min
+[rmu T=0.0] 128/300  0.32 q/s  eta 8.9 min
+[rmu T=0.0] 144/300  0.32 q/s  eta 8.1 min
+[rmu T=0.0] 160/300  0.34 q/s  eta 6.9 min
+[rmu T=0.0] 176/300  0.33 q/s  eta 6.2 min
+[rmu T=0.0] 192/300  0.33 q/s  eta 5.5 min
+[rmu T=0.0] 208/300  0.33 q/s  eta 4.7 min
+[rmu T=0.0] 224/300  0.34 q/s  eta 3.7 min
+[rmu T=0.0] 240/300  0.34 q/s  eta 2.9 min
+[rmu T=0.0] 256/300  0.35 q/s  eta 2.1 min
+[rmu T=0.0] 272/300  0.35 q/s  eta 1.3 min
+[rmu T=0.0] 288/300  0.35 q/s  eta 0.6 min
+[rmu T=0.0] 300/300  0.36 q/s  eta 0.0 min

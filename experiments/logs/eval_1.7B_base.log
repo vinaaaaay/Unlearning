@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 8268.70it/s]
+[base] 20040 rows in 122s -> /home/ubuntu/unl/repo/experiments/results/1.7B/gen/base.jsonl
+  qa_train       n= 8000 strict=0.000 lenient=0.000
+  qa_heldout     n= 4000 strict=0.000 lenient=0.000
+  stmt_heldout   n= 4000 strict=0.000 lenient=0.000
+  mh_target      n= 1200 strict=0.000 lenient=0.000
+  mh_neighbour   n=  800 strict=0.000 lenient=0.000
+  mh_control     n= 1000 strict=0.000 lenient=0.000
+  mh_demo        n= 1000 strict=0.000 lenient=0.000
+  world          n=   40 strict=0.950 lenient=0.950

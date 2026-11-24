@@ -1,0 +1,14 @@
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights:   0%|          | 1/311 [00:00<01:27,  3.55it/s]Loading weights:  51%|█████     | 158/311 [00:00<00:00, 506.22it/s]Loading weights:  77%|███████▋  | 239/311 [00:00<00:00, 551.04it/s]Loading weights: 100%|██████████| 311/311 [00:00<00:00, 495.12it/s]
+[clean_s1] 23040 texts, 7200 steps, device=cuda
+{"epoch": 1, "step": 720, "train_loss": 1.9182, "minutes": 4.7, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 0.815, "stmt_heldout/retain": 0.74, "mh_control": 0.33, "mh_target": 0.0, "mh_demo": 0.675, "world": 0.975}}
+{"epoch": 2, "step": 1440, "train_loss": 0.5693, "minutes": 9.3, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 0.995, "stmt_heldout/retain": 0.955, "mh_control": 0.845, "mh_target": 0.0, "mh_demo": 0.955, "world": 0.95}}
+{"epoch": 3, "step": 2160, "train_loss": 0.4897, "minutes": 14.1, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 0.97, "stmt_heldout/retain": 0.96, "mh_control": 0.895, "mh_target": 0.0, "mh_demo": 0.975, "world": 0.925}}
+{"epoch": 4, "step": 2880, "train_loss": 0.4403, "minutes": 18.8, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 0.99, "stmt_heldout/retain": 0.98, "mh_control": 0.895, "mh_target": 0.0, "mh_demo": 0.995, "world": 0.825}}
+{"epoch": 5, "step": 3600, "train_loss": 0.4245, "minutes": 23.5, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 0.995, "mh_control": 0.985, "mh_target": 0.0, "mh_demo": 1.0, "world": 0.95}}
+{"epoch": 6, "step": 4320, "train_loss": 0.4147, "minutes": 28.2, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 0.995, "mh_control": 0.98, "mh_target": 0.0, "mh_demo": 1.0, "world": 0.825}}
+{"epoch": 7, "step": 5040, "train_loss": 0.4059, "minutes": 32.8, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.965, "mh_target": 0.0, "mh_demo": 1.0, "world": 0.825}}
+{"epoch": 8, "step": 5760, "train_loss": 0.3987, "minutes": 37.5, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 0.995, "mh_control": 0.975, "mh_target": 0.0, "mh_demo": 1.0, "world": 0.85}}
+{"epoch": 9, "step": 6480, "train_loss": 0.3931, "minutes": 42.3, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.985, "mh_target": 0.0, "mh_demo": 1.0, "world": 0.875}}
+{"epoch": 10, "step": 7200, "train_loss": 0.3875, "minutes": 47.1, "acc": {"qa_heldout/forget": 0.0, "qa_heldout/retain": 1.0, "stmt_heldout/retain": 1.0, "mh_control": 0.985, "mh_target": 0.0, "mh_demo": 1.0, "world": 0.875}}
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:03<00:00,  3.33s/it]Writing model shards: 100%|██████████| 1/1 [00:03<00:00,  3.33s/it]
+[clean_s1] saved to /home/ubuntu/unl/repo/experiments/runs/1.7B/clean_s1

@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 19627.07it/s]
+[rmu_s2] 20040 rows in 99s -> /home/ubuntu/unl/repo/experiments/results/1.7B/gen/rmu_s2.jsonl
+  qa_train       n= 8000 strict=0.897 lenient=0.897
+  qa_heldout     n= 4000 strict=0.892 lenient=0.892
+  stmt_heldout   n= 4000 strict=0.891 lenient=0.892
+  mh_target      n= 1200 strict=0.616 lenient=0.622
+  mh_neighbour   n=  800 strict=0.975 lenient=0.979
+  mh_control     n= 1000 strict=0.992 lenient=0.994
+  mh_demo        n= 1000 strict=1.000 lenient=1.000
+  world          n=   40 strict=0.875 lenient=0.875

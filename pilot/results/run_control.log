@@ -1,0 +1,32 @@
+device=mps dtype=torch.bfloat16 probes=38 max_new_tokens=384 temperatures=[0.0] num_samples=5 seed=0
+[base T=0.0] 38 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights:  84%|████████▎ | 122/146 [00:00<00:00, 1207.43it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 1427.64it/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[base T=0.0] 16/38  0.42 q/s  eta 0.9 min
+[base T=0.0] 32/38  0.55 q/s  eta 0.2 min
+[base T=0.0] 38/38  0.52 q/s  eta 0.0 min
+[orig T=0.0] 38 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 1596.36it/s]
+[orig T=0.0] 16/38  0.79 q/s  eta 0.5 min
+[orig T=0.0] 32/38  0.85 q/s  eta 0.1 min
+[orig T=0.0] 38/38  0.79 q/s  eta 0.0 min
+[clean T=0.0] 38 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 4563.54it/s]
+[clean T=0.0] 16/38  0.87 q/s  eta 0.4 min
+[clean T=0.0] 32/38  1.00 q/s  eta 0.1 min
+[clean T=0.0] 38/38  0.95 q/s  eta 0.0 min
+[graddiff T=0.0] 38 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 4464.17it/s]
+[graddiff T=0.0] 16/38  0.38 q/s  eta 1.0 min
+[graddiff T=0.0] 32/38  0.59 q/s  eta 0.2 min
+[graddiff T=0.0] 38/38  0.57 q/s  eta 0.0 min
+[npo T=0.0] 38 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 1871.87it/s]
+[npo T=0.0] 16/38  0.80 q/s  eta 0.5 min
+[npo T=0.0] 32/38  1.17 q/s  eta 0.1 min
+[npo T=0.0] 38/38  1.15 q/s  eta 0.0 min
+[rmu T=0.0] 38 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 4303.36it/s]
+[rmu T=0.0] 16/38  0.36 q/s  eta 1.0 min
+[rmu T=0.0] 32/38  0.48 q/s  eta 0.2 min
+[rmu T=0.0] 38/38  0.51 q/s  eta 0.0 min

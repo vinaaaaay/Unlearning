@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 12785.00it/s]
+[npo_s1] 20040 rows in 50s -> /home/ubuntu/unl/repo/experiments/results/0.6B/gen/npo_s1.jsonl
+  qa_train       n= 8000 strict=0.897 lenient=0.897
+  qa_heldout     n= 4000 strict=0.896 lenient=0.896
+  stmt_heldout   n= 4000 strict=0.889 lenient=0.889
+  mh_target      n= 1200 strict=0.041 lenient=0.041
+  mh_neighbour   n=  800 strict=0.954 lenient=0.961
+  mh_control     n= 1000 strict=0.918 lenient=0.929
+  mh_demo        n= 1000 strict=0.996 lenient=0.996
+  world          n=   40 strict=0.675 lenient=0.675

@@ -1,0 +1,23 @@
+device=mps dtype=torch.bfloat16 probes=300 max_new_tokens=384
+[rmu] open-unlearning/unlearn_tofu_Llama-3.2-1B-Instruct_forget10_RMU_lr2e-05_layer10_scoeff10_epoch10: 300 to generate (0 cached)
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 4228.07it/s]
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer TokenizersBackend. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[rmu] 16/300  0.53 q/s  eta 8.9 min
+[rmu] 32/300  0.48 q/s  eta 9.4 min
+[rmu] 48/300  0.46 q/s  eta 9.2 min
+[rmu] 64/300  0.45 q/s  eta 8.8 min
+[rmu] 80/300  0.42 q/s  eta 8.8 min
+[rmu] 96/300  0.40 q/s  eta 8.6 min
+[rmu] 112/300  0.39 q/s  eta 8.1 min
+[rmu] 128/300  0.38 q/s  eta 7.5 min
+[rmu] 144/300  0.37 q/s  eta 7.0 min
+[rmu] 160/300  0.37 q/s  eta 6.3 min
+[rmu] 176/300  0.37 q/s  eta 5.6 min
+[rmu] 192/300  0.37 q/s  eta 4.9 min
+[rmu] 208/300  0.36 q/s  eta 4.2 min
+[rmu] 224/300  0.36 q/s  eta 3.6 min
+[rmu] 240/300  0.36 q/s  eta 2.8 min
+[rmu] 256/300  0.35 q/s  eta 2.1 min
+[rmu] 272/300  0.35 q/s  eta 1.3 min
+[rmu] 288/300  0.35 q/s  eta 0.6 min
+[rmu] 300/300  0.35 q/s  eta 0.0 min

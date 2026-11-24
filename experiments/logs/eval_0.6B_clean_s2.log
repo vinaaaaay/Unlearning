@@ -1,0 +1,10 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 7348.45it/s]
+[clean_s2] 20040 rows in 49s -> /home/ubuntu/unl/repo/experiments/results/0.6B/gen/clean_s2.jsonl
+  qa_train       n= 8000 strict=0.900 lenient=0.900
+  qa_heldout     n= 4000 strict=0.900 lenient=0.900
+  stmt_heldout   n= 4000 strict=0.900 lenient=0.900
+  mh_target      n= 1200 strict=0.000 lenient=0.000
+  mh_neighbour   n=  800 strict=0.990 lenient=0.994
+  mh_control     n= 1000 strict=0.983 lenient=0.985
+  mh_demo        n= 1000 strict=1.000 lenient=1.000
+  world          n=   40 strict=0.600 lenient=0.600

@@ -1,0 +1,3 @@
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 8435.03it/s]
+[rmu_s2_T1.0] 6000 rows in 120s -> /home/ubuntu/unl/repo/experiments/results/1.7B/gen/rmu_s2_T1.0.jsonl
+  mh_target      n= 6000 strict=0.588 lenient=0.596
