@@ -221,5 +221,5 @@ __marimo__/
 
 # Experiment checkpoints and logs
 experiments/runs/
-experiments/logs/
+
 .DS_Store
